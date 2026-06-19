@@ -1,0 +1,11 @@
+/* antd (via ConfigProvider + reset.css) owns component styling and theming.
+   Just make the app fill the viewport. */
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
