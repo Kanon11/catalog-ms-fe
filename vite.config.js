@@ -13,6 +13,7 @@ export default defineConfig({
     proxy: {
       '/auth': { target: API_TARGET, changeOrigin: true },
       '/products': { target: API_TARGET, changeOrigin: true },
+      '/books': { target: API_TARGET, changeOrigin: true },
       '/users': { target: API_TARGET, changeOrigin: true },
       '/roles': { target: API_TARGET, changeOrigin: true },
       '/settings': { target: API_TARGET, changeOrigin: true },

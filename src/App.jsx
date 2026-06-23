@@ -1,6 +1,7 @@
 import { Routes, Route, Navigate } from 'react-router-dom'
 import { LoginPage } from './pages/LoginPage'
 import { ProductsPage } from './pages/ProductsPage'
+import { BooksPage } from './pages/BooksPage'
 import { UsersPage } from './pages/UsersPage'
 import { RolesPage } from './pages/RolesPage'
 import { SettingsPage } from './pages/SettingsPage'
@@ -19,6 +20,7 @@ function App() {
         <Route element={<Layout />}>
           <Route index element={<Navigate to="/products" replace />} />
           <Route path="/products" element={<ProductsPage />} />
+          <Route path="/books" element={<BooksPage />} />
 
           {/* Admin-only menu pages. */}
           <Route element={<ProtectedRoute roles={['ROLE_ADMIN']} />}>

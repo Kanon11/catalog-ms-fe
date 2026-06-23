@@ -2,6 +2,7 @@ import { Outlet, useLocation, useNavigate } from 'react-router-dom'
 import { Layout as AntLayout, Button, Menu, Space, Typography, theme } from 'antd'
 import {
   AppstoreOutlined,
+  BookOutlined,
   LogoutOutlined,
   SafetyOutlined,
   SettingOutlined,
@@ -14,6 +15,7 @@ const { Sider, Header, Content } = AntLayout
 
 const ICONS = {
   '/products': <AppstoreOutlined />,
+  '/books': <BookOutlined />,
   '/users': <TeamOutlined />,
   '/roles': <SafetyOutlined />,
   '/settings': <SettingOutlined />,
