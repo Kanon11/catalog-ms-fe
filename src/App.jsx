@@ -1,7 +1,10 @@
 import { Routes, Route, Navigate } from 'react-router-dom'
 import { LoginPage } from './pages/LoginPage'
-import { ProductsPage } from './pages/ProductsPage'
-import { BooksPage } from './pages/BooksPage'
+// import { ProductsPage } from './pages/ProductsPage'
+// import { BooksPage } from './pages/BooksPage'
+import { WorkersPage } from './pages/WorkersPage'
+import { ApplicationsPage } from './pages/ApplicationsPage'
+import { FactoriesPage } from './pages/FactoriesPage'
 import { UsersPage } from './pages/UsersPage'
 import { RolesPage } from './pages/RolesPage'
 import { SettingsPage } from './pages/SettingsPage'
@@ -18,9 +21,12 @@ function App() {
       {/* Authenticated area: shared nav layout. */}
       <Route element={<ProtectedRoute />}>
         <Route element={<Layout />}>
-          <Route index element={<Navigate to="/products" replace />} />
-          <Route path="/products" element={<ProductsPage />} />
-          <Route path="/books" element={<BooksPage />} />
+          <Route index element={<Navigate to="/workers" replace />} />
+          {/* <Route path="/products" element={<ProductsPage />} /> */}
+          {/* <Route path="/books" element={<BooksPage />} /> */}
+          <Route path="/workers" element={<WorkersPage />} />
+          <Route path="/applications" element={<ApplicationsPage />} />
+          <Route path="/factories" element={<FactoriesPage />} />
 
           {/* Admin-only menu pages. */}
           <Route element={<ProtectedRoute roles={['ROLE_ADMIN']} />}>
